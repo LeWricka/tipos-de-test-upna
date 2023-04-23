@@ -2,7 +2,7 @@
 
 use App\Infrastructure\Controllers\GetStatusController;
 use App\Infrastructure\Controllers\GetUserController;
-use App\Infrastructure\Controllers\GetUsersController;
+use App\Infrastructure\Controllers\GetUsers\GetUsersController;
 use App\Infrastructure\Controllers\UserIsEarlyAdopterController;
 use Illuminate\Support\Facades\Route;
 
