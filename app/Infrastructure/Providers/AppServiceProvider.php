@@ -2,9 +2,9 @@
 
 namespace App\Infrastructure\Providers;
 
-use App\Application\UserDataSource\UserDataSource;
 use App\DataSource\Database\EloquentUserDataSource;
-use App\Infrastructure\Persistence\FileUserDataSource;
+use App\Domain\UserRepository;
+use App\Infrastructure\Persistence\FileUserRepository;
 use Illuminate\Support\ServiceProvider;
 use Tests\app\Infrastructure\Controller\FakeUserDatasource;
 
@@ -27,8 +27,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-            $this->app->bind(UserDataSource::class, function () {
-                return new FileUserDataSource();
+            $this->app->bind(UserRepository::class, function () {
+                return new FileUserRepository();
             });
     }
 }

@@ -2,14 +2,14 @@
 
 namespace App\Application;
 
-use App\Application\UserDataSource\UserDataSource;
 use App\Domain\User;
+use App\Domain\UserRepository;
 
 class GetSpecialUsersService
 {
-    private UserDataSource $userDataSource;
+    private UserRepository $userDataSource;
 
-    public function __construct(UserDataSource $userDataSource)
+    public function __construct(UserRepository $userDataSource)
     {
         $this->userDataSource = $userDataSource;
     }

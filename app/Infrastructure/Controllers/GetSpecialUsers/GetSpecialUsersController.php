@@ -3,10 +3,8 @@
 namespace App\Infrastructure\Controllers\GetSpecialUsers;
 
 use App\Application\GetSpecialUsersService;
-use App\Application\UserDataSource\UserDataSource;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller as BaseController;
-use Symfony\Component\HttpFoundation\Response;
 
 class GetSpecialUsersController extends BaseController
 {

@@ -1,16 +1,16 @@
 <?php
 
-namespace Tests\app\Infrastructure\Controller\GetUsers;
+namespace Tests\app\Infrastructure\Controller\GetSpecialUsers;
 
-use App\Application\UserDataSource\UserDataSource;
 use App\Domain\User;
-use App\Infrastructure\Controllers\GetUsers\SpecialUserResponse;
-use App\Infrastructure\Controllers\GetUsers\SpecialUsersResponseMapper;
+use App\Domain\UserRepository;
+use App\Infrastructure\Controllers\GetSpecialUsers\SpecialUserResponse;
+use App\Infrastructure\Controllers\GetSpecialUsers\SpecialUsersResponseMapper;
 use Tests\TestCase;
 
 class SpecialUsersResponseMapperTest extends TestCase
 {
-    private UserDataSource $userDataSource;
+    private UserRepository $userDataSource;
 
     protected function setUp(): void
     {

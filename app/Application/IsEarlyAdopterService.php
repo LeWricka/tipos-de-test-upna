@@ -3,13 +3,13 @@
 namespace App\Application;
 
 use App\Application\Exceptions\UserNotFoundException;
-use App\Application\UserDataSource\UserDataSource;
+use App\Domain\UserRepository;
 
 class IsEarlyAdopterService
 {
-    private UserDataSource $userDataSource;
+    private UserRepository $userDataSource;
 
-    public function __construct(UserDataSource $userDataSource)
+    public function __construct(UserRepository $userDataSource)
     {
         $this->userDataSource = $userDataSource;
     }

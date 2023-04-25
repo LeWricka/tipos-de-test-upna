@@ -4,20 +4,19 @@ namespace Tests\app\Application;
 
 use App\Application\Exceptions\UserNotFoundException;
 use App\Application\IsEarlyAdopterService;
-use App\Application\UserDataSource\UserDataSource;
 use App\Domain\User;
-use App\Infrastructure\Persistence\FileUserDataSource;
+use App\Domain\UserRepository;
 use Mockery;
 use Tests\TestCase;
 
 class IsEarlyAdopterServiceTest extends TestCase
 {
-    private UserDataSource $userDataSource;
+    private UserRepository $userDataSource;
     private IsEarlyAdopterService $isEarlyAdopterService;
 
     protected function setUp(): void
     {
-        $this->userDataSource = Mockery::mock(UserDataSource::class);
+        $this->userDataSource = Mockery::mock(UserRepository::class);
         $this->isEarlyAdopterService = new IsEarlyAdopterService($this->userDataSource);
     }
 

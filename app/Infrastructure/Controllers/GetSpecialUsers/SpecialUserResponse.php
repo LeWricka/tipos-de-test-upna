@@ -19,6 +19,9 @@ class SpecialUserResponse implements JsonSerializable
         $this->email = $user->getEmail();
     }
 
+    /**
+     * @return SpecialUserResponse[]
+     */
     public function jsonSerialize(): array
     {
         return [

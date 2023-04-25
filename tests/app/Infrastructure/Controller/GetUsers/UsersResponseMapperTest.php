@@ -2,15 +2,15 @@
 
 namespace Tests\app\Infrastructure\Controller\GetUsers;
 
-use App\Application\UserDataSource\UserDataSource;
 use App\Domain\User;
+use App\Domain\UserRepository;
 use App\Infrastructure\Controllers\GetUsers\UserResponse;
 use App\Infrastructure\Controllers\GetUsers\UsersResponseMapper;
 use Tests\TestCase;
 
 class UsersResponseMapperTest extends TestCase
 {
-    private UserDataSource $userDataSource;
+    private UserRepository $userDataSource;
 
     protected function setUp(): void
     {

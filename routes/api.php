@@ -24,7 +24,3 @@ Route::get('/user/early-adopter/{userEmail}', UserIsEarlyAdopterController::clas
 Route::get('/users/special-users', GetSpecialUsersController::class);
 Route::get('/users/{userEmail}', GetUserController::class);
 Route::get('/users', GetUsersController::class);
-<<<<<<< Updated upstream
-Route::get('/user/early-adopter/{userEmail}', UserIsEarlyAdopterController::class);
-=======
->>>>>>> Stashed changes

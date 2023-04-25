@@ -2,20 +2,20 @@
 
 namespace Tests\app\Infrastructure\Controller;
 
-use App\Application\UserDataSource\UserDataSource;
 use App\Domain\User;
+use App\Domain\UserRepository;
 use Mockery;
 use Tests\TestCase;
 
 class GetUserControllerTest extends TestCase
 {
-    private UserDataSource $userDataSource;
+    private UserRepository $userDataSource;
 
     protected function setUp(): void
     {
         parent::setUp();
-        $this->userDataSource = Mockery::mock(UserDataSource::class);
-        $this->app->bind(UserDataSource::class, function () {
+        $this->userDataSource = Mockery::mock(UserRepository::class);
+        $this->app->bind(UserRepository::class, function () {
             return $this->userDataSource;
         });
     }
